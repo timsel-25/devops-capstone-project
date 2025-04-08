@@ -13,8 +13,8 @@ from . import app  # Import Flask application
 # Health Endpoint
 ############################################################
 
-@app.route("/health")
 
+@app.route("/health")
 def health():
     """Health Status"""
     return jsonify(dict(status="OK")), status.HTTP_200_OK
@@ -23,8 +23,8 @@ def health():
 # GET INDEX
 ######################################################################
 
-@app.route("/")
 
+@app.route("/")
 def index():
     """Root URL response"""
     return (
@@ -40,8 +40,8 @@ def index():
 # CREATE A NEW ACCOUNT
 ######################################################################
 
-@app.route("/accounts", methods=["POST"])
 
+@app.route("/accounts", methods=["POST"])
 def create_accounts():
     """
     Creates an Account
@@ -64,8 +64,8 @@ def create_accounts():
     # LIST ALL ACCOUNTS
     ######################################################################
 
-@app.route("/accounts", methods=["GET"])
 
+@app.route("/accounts", methods=["GET"])
 def list_accounts():
     """
     List all Accounts
@@ -83,8 +83,8 @@ def list_accounts():
     # READ AN ACCOUNT
     ######################################################################
 
-@app.route("/accounts/<int:account_id>", methods=["GET"])
 
+@app.route("/accounts/<int:account_id>", methods=["GET"])
 def get_accounts(account_id):
     """
     Reads an Account
@@ -102,8 +102,8 @@ def get_accounts(account_id):
     # UPDATE AN EXISTING ACCOUNT
     ######################################################################
 
-@app.route("/accounts/<int:account_id>", methods=["PUT"])
 
+@app.route("/accounts/<int:account_id>", methods=["PUT"])
 def update_accounts(account_id):
     """
     Update an Account
