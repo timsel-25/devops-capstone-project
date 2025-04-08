@@ -9,7 +9,6 @@ from service.models import Account
 from service.common import status  # HTTP Status Codes
 from . import app  # Import Flask application
 
-
 ############################################################
 # Health Endpoint
 ############################################################
@@ -17,7 +16,6 @@ from . import app  # Import Flask application
 def health():
     """Health Status"""
     return jsonify(dict(status="OK")), status.HTTP_200_OK
-
 
 ######################################################################
 # GET INDEX
@@ -33,7 +31,6 @@ def index():
         ),
         status.HTTP_200_OK,
     )
-
 
 ######################################################################
 # CREATE A NEW ACCOUNT
